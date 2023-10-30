@@ -1,0 +1,7 @@
+{
+  "name": "myscan",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}
