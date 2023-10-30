@@ -1,0 +1,24 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      OCR Scanner App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-button (click)="captureImage()">Capture Image</ion-button>
+  <ion-img [src]="capturedImage"></ion-img>
+  <ion-button (click)="performOCR()">Perform OCR</ion-button>
+  <ion-card>
+    <ion-card-header>
+      OCR Result
+    </ion-card-header>
+    <ion-card-content>
+      {{ ocrResult }}
+    </ion-card-content>
+  </ion-card>
+  <ion-button routerLink="/scanner">Scanner page</ion-button>
+  <ion-button routerLink="/ocrscan">OCR page</ion-button>
+  <ion-button routerLink="/vision">Vision</ion-button>
+</ion-content>

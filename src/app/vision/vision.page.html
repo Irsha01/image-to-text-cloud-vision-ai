@@ -1,0 +1,27 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-icon routerLink="/home" name="home" slot="start">Scanner page</ion-icon>
+    </ion-buttons>
+    
+    <ion-title>vision</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true">
+  <!-- <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">vision</ion-title>
+    </ion-toolbar>
+  </ion-header> -->
+
+  <ion-button (click)="takePhoto()"> Take photo</ion-button>
+ 
+  <ion-card>
+    <ion-card-header>Ocr Result</ion-card-header>
+    <ion-card-content>
+      {{ocrdata}}
+    </ion-card-content>
+  </ion-card>
+</ion-content>

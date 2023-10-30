@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <!-- <ion-icon routerLink="/home" name="home" slot="start">Scanner page</ion-icon> -->
+      <ion-title>
+          OCR Scanner
+      </ion-title>
+      <ion-buttons slot="end">
+          <!-- <ion-button fill="clear" color="danger" slot="start" (click)="refresh();">
+              <ion-icon slot="icon-only" name="ios-refresh"></ion-icon>
+          </ion-button> -->
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+
+    <ion-button routerLink="/vision">Vision Page</ion-button>
+  <!-- <ion-button expand="full" fill="solid" color="danger" (click)="captureImage()">Capture Image</ion-button> -->
+ <div class="buttondiv">
+  <ion-button expand="full" fill="solid" class="buttons" (click)="selectSource()">Select Image</ion-button>
+  <ion-button expand="full" fill="solid"  class="buttons" (click)="recognizeImage()" [disabled]="showimage">Recognize Image</ion-button>
+</div>
+  <img [src]="selectedImage" *ngIf="selectedImage">
+  <ion-button (click)="checkdevice()">Check device</ion-button>
+
+  <ion-card *ngIf="imageText">
+      <ion-card-header color="dark">
+          Image Text
+      </ion-card-header>
+      <ion-card-content color="dark">
+          {{ imageText }}
+       //   {{ imageText1 }}
+      </ion-card-content>
+  </ion-card>
+
+</ion-content>

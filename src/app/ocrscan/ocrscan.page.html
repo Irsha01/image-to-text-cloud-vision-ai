@@ -1,0 +1,26 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-icon routerLink="/home" name="home" slot="start">Scanner page</ion-icon>
+    <ion-title>
+      Ionic Tesseract
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <!-- <ng-progress [min]="0" [max]="1"></ng-progress> -->
+  <button ion-button full (click)="captureImage()">Capture Image</button>
+  <button ion-button full (click)="selectSource()">Select Image</button>
+  <button ion-button full (click)="recognizeImage()" [disabled]="!selectedImage">Recognize Image</button>
+
+  <img [src]="selectedImage" *ngIf="selectedImage">
+
+  <ion-card *ngIf="imageText">
+    <ion-card-header>
+      Image Text
+    </ion-card-header>
+    <ion-card-content>
+      {{ imageText }}
+    </ion-card-content>
+  </ion-card>
+</ion-content>
