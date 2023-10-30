@@ -13,7 +13,7 @@ export class VisionPage implements OnInit {
   ///imageData=''
   isDataRetrieved=false
   ocrdata:any=''
-  googleCloudVisionAPIKey='AIzaSyA3DxPp7XEXfQNanBNanegt2eyXida-9WU';
+  googleCloudVisionAPIKey='';
   // response1:any=[
   //   {
   //       "locale": "en",
